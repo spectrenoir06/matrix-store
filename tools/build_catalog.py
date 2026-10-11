@@ -10,6 +10,7 @@ matrix's 30 KB.
     python3 tools/build_catalog.py --check   # CI: fails if catalog.json is stale
 """
 import json
+import re
 import sys
 import zlib
 from datetime import datetime, timezone
@@ -22,6 +23,11 @@ KINDS = {".lua": "lua", ".gif": "gif"}
 LAYOUTS = {"cross"}  # a layout an item needs; none: any board
 LUA_MAX = 4096  # bytes: bigger scripts tend to run out of memory compiling (30 KB in all)
 GIF_MAX = 300_000
+# needs: what a script uses beyond the panel, found in its code
+NEEDS = {
+    "mic": r"\bget(FFT|Wave)\s*\(",  # the microphone
+    "time": r"\bgetTime\s*\(",  # the time of day (from the app or NTP)
+}
 
 
 def fail(msg):
@@ -68,6 +74,10 @@ def build():
             code = "\n".join(line.split("--", 1)[0] for line in data.decode("utf-8", "replace").splitlines())
             if any(ord(c) > 126 for c in code):
                 fail(f"{f}: non-ASCII outside comments (the matrix's font is plain ASCII)")
+            # what it uses beyond the panel (the app shows a badge): found in the code
+            needs = [n for n, pat in NEEDS.items() if re.search(pat, code)]
+            if needs:
+                entry["needs"] = needs
         else:
             if len(data) > GIF_MAX:
                 fail(f"{f}: {len(data)} B, keep GIFs under {GIF_MAX} B")

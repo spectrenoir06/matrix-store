@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-11T17:42:40Z",
+ "updated": "2026-10-11T17:47:38Z",
  "items": [
   {
    "id": "cross_pharma",
@@ -276,7 +276,10 @@
     "clock"
    ],
    "size": 2247,
-   "crc32": 2249247120
+   "crc32": 2249247120,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "clock_binary",
@@ -289,7 +292,10 @@
     "clock"
    ],
    "size": 1637,
-   "crc32": 1091788965
+   "crc32": 1091788965,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "clock_digital",
@@ -302,7 +308,10 @@
     "clock"
    ],
    "size": 1932,
-   "crc32": 1915132072
+   "crc32": 1915132072,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "clock_words",
@@ -315,7 +324,10 @@
     "clock"
    ],
    "size": 3061,
-   "crc32": 2563812106
+   "crc32": 2563812106,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "info_countdown",
@@ -329,7 +341,10 @@
     "info"
    ],
    "size": 2339,
-   "crc32": 1971849813
+   "crc32": 1971849813,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "info_progress",
@@ -343,7 +358,10 @@
     "info"
    ],
    "size": 2091,
-   "crc32": 2771266979
+   "crc32": 2771266979,
+   "needs": [
+    "time"
+   ]
   },
   {
    "id": "fx_comets",
@@ -679,12 +697,15 @@
    "file": "lua/sound_bars.lua",
    "name": "Spectrum bars",
    "author": "Spectre",
-   "description": "The sound's spectrum as bars, a flash on the beat. Needs the matrix's microphone.",
+   "description": "The sound's spectrum as bars, a flash on the beat.",
    "tags": [
     "sound"
    ],
    "size": 743,
-   "crc32": 2633578123
+   "crc32": 2633578123,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_eq",
@@ -692,12 +713,15 @@
    "file": "lua/sound_eq.lua",
    "name": "Equalizer",
    "author": "Spectre",
-   "description": "Hi-fi bars from green to red with slowly falling peaks. Needs the matrix's microphone.",
+   "description": "Hi-fi bars from green to red with slowly falling peaks.",
    "tags": [
     "sound"
    ],
    "size": 1353,
-   "crc32": 2303011593
+   "crc32": 2303011593,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_fireworks",
@@ -705,12 +729,15 @@
    "file": "lua/sound_fireworks.lua",
    "name": "Sound fireworks",
    "author": "Spectre",
-   "description": "Each beat bursts a rocket of sparks. Needs the matrix's microphone.",
+   "description": "Each beat bursts a rocket of sparks.",
    "tags": [
     "sound"
    ],
    "size": 2015,
-   "crc32": 1527623170
+   "crc32": 1527623170,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_history",
@@ -718,12 +745,15 @@
    "file": "lua/sound_history.lua",
    "name": "Sound history",
    "author": "Spectre",
-   "description": "The sound scrolling by like a track's waveform. Needs the matrix's microphone.",
+   "description": "The sound scrolling by like a track's waveform.",
    "tags": [
     "sound"
    ],
    "size": 1036,
-   "crc32": 3289450256
+   "crc32": 3289450256,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_plasma",
@@ -731,13 +761,16 @@
    "file": "lua/sound_plasma.lua",
    "name": "Bass plasma",
    "author": "Spectre",
-   "description": "Plasma dancing to the bass: faster and brighter when it hits. Needs the matrix's microphone.",
+   "description": "Plasma dancing to the bass: faster and brighter when it hits.",
    "tags": [
     "sound",
     "trippy"
    ],
    "size": 1143,
-   "crc32": 1081141593
+   "crc32": 1081141593,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_rings",
@@ -745,12 +778,15 @@
    "file": "lua/sound_rings.lua",
    "name": "Beat rings",
    "author": "Spectre",
-   "description": "Each beat sends a ring of color out from the center. Needs the matrix's microphone.",
+   "description": "Each beat sends a ring of color out from the center.",
    "tags": [
     "sound"
    ],
    "size": 1360,
-   "crc32": 2819519828
+   "crc32": 2819519828,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_sun",
@@ -758,12 +794,15 @@
    "file": "lua/sound_sun.lua",
    "name": "Sound sun",
    "author": "Spectre",
-   "description": "Rays all around, one per frequency band, slowly turning. Needs the matrix's microphone.",
+   "description": "Rays all around, one per frequency band, slowly turning.",
    "tags": [
     "sound"
    ],
    "size": 1787,
-   "crc32": 3400685691
+   "crc32": 3400685691,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_text",
@@ -771,13 +810,16 @@
    "file": "lua/sound_text.lua",
    "name": "Beat word",
    "author": "Spectre",
-   "description": "A word that jumps on every beat. Needs the matrix's microphone.",
+   "description": "A word that jumps on every beat.",
    "tags": [
     "sound",
     "text"
    ],
    "size": 1248,
-   "crc32": 1925833329
+   "crc32": 1925833329,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_waterfall",
@@ -785,12 +827,15 @@
    "file": "lua/sound_waterfall.lua",
    "name": "Spectrogram",
    "author": "Spectre",
-   "description": "Time scrolls up, bass on the left, loud is hot. Needs the matrix's microphone.",
+   "description": "Time scrolls up, bass on the left, loud is hot.",
    "tags": [
     "sound"
    ],
    "size": 1377,
-   "crc32": 1267208774
+   "crc32": 1267208774,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "sound_wave",
@@ -798,12 +843,15 @@
    "file": "lua/sound_wave.lua",
    "name": "Oscilloscope",
    "author": "Spectre",
-   "description": "The microphone's waveform. Needs the matrix's microphone.",
+   "description": "The microphone's waveform.",
    "tags": [
     "sound"
    ],
    "size": 567,
-   "crc32": 1770503753
+   "crc32": 1770503753,
+   "needs": [
+    "mic"
+   ]
   },
   {
    "id": "text_scroll",

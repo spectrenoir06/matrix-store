@@ -474,7 +474,7 @@
     "file": "lua/sound_bars.lua",
     "name": "Spectrum bars",
     "author": "Spectre",
-    "description": "The sound's spectrum as bars, a flash on the beat. Needs the matrix's microphone.",
+    "description": "The sound's spectrum as bars, a flash on the beat.",
     "tags": [
       "sound"
     ]
@@ -483,7 +483,7 @@
     "file": "lua/sound_eq.lua",
     "name": "Equalizer",
     "author": "Spectre",
-    "description": "Hi-fi bars from green to red with slowly falling peaks. Needs the matrix's microphone.",
+    "description": "Hi-fi bars from green to red with slowly falling peaks.",
     "tags": [
       "sound"
     ]
@@ -492,7 +492,7 @@
     "file": "lua/sound_fireworks.lua",
     "name": "Sound fireworks",
     "author": "Spectre",
-    "description": "Each beat bursts a rocket of sparks. Needs the matrix's microphone.",
+    "description": "Each beat bursts a rocket of sparks.",
     "tags": [
       "sound"
     ]
@@ -501,7 +501,7 @@
     "file": "lua/sound_history.lua",
     "name": "Sound history",
     "author": "Spectre",
-    "description": "The sound scrolling by like a track's waveform. Needs the matrix's microphone.",
+    "description": "The sound scrolling by like a track's waveform.",
     "tags": [
       "sound"
     ]
@@ -510,7 +510,7 @@
     "file": "lua/sound_plasma.lua",
     "name": "Bass plasma",
     "author": "Spectre",
-    "description": "Plasma dancing to the bass: faster and brighter when it hits. Needs the matrix's microphone.",
+    "description": "Plasma dancing to the bass: faster and brighter when it hits.",
     "tags": [
       "sound",
       "trippy"
@@ -520,7 +520,7 @@
     "file": "lua/sound_rings.lua",
     "name": "Beat rings",
     "author": "Spectre",
-    "description": "Each beat sends a ring of color out from the center. Needs the matrix's microphone.",
+    "description": "Each beat sends a ring of color out from the center.",
     "tags": [
       "sound"
     ]
@@ -529,7 +529,7 @@
     "file": "lua/sound_sun.lua",
     "name": "Sound sun",
     "author": "Spectre",
-    "description": "Rays all around, one per frequency band, slowly turning. Needs the matrix's microphone.",
+    "description": "Rays all around, one per frequency band, slowly turning.",
     "tags": [
       "sound"
     ]
@@ -538,7 +538,7 @@
     "file": "lua/sound_text.lua",
     "name": "Beat word",
     "author": "Spectre",
-    "description": "A word that jumps on every beat. Needs the matrix's microphone.",
+    "description": "A word that jumps on every beat.",
     "tags": [
       "sound",
       "text"
@@ -548,7 +548,7 @@
     "file": "lua/sound_waterfall.lua",
     "name": "Spectrogram",
     "author": "Spectre",
-    "description": "Time scrolls up, bass on the left, loud is hot. Needs the matrix's microphone.",
+    "description": "Time scrolls up, bass on the left, loud is hot.",
     "tags": [
       "sound"
     ]
@@ -557,7 +557,7 @@
     "file": "lua/sound_wave.lua",
     "name": "Oscilloscope",
     "author": "Spectre",
-    "description": "The microphone's waveform. Needs the matrix's microphone.",
+    "description": "The microphone's waveform.",
     "tags": [
       "sound"
     ]
