@@ -1,0 +1,136 @@
+[
+  {
+    "file": "lua/cross_pharma.lua",
+    "name": "Pharma techno",
+    "author": "Spectre",
+    "description": "The pharmacy cross at 130 BPM: pulse, tunnel, arms chase, scanner, heartbeat, glitch, spinning plus.",
+    "tags": ["techno", "pharmacy"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_tunnel.lua",
+    "name": "Cross tunnel",
+    "author": "Spectre",
+    "description": "Flying down an endless plus-shaped tube, faster on the kick, four palettes.",
+    "tags": ["trippy", "3d", "techno"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_vicsek.lua",
+    "name": "Vicsek zoom",
+    "author": "Spectre",
+    "description": "The cross is the first step of the Vicsek fractal: an endless zoom into it.",
+    "tags": ["fractal", "trippy"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_julia.lua",
+    "name": "Julia cross",
+    "author": "Spectre",
+    "description": "The Julia set of z^4 + c, a fractal shaped like a cross, breathing and morphing.",
+    "tags": ["fractal", "trippy"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_mandala.lua",
+    "name": "Mandala",
+    "author": "Spectre",
+    "description": "Polar plasma: waving petals, rings and crosses flowing out of the center.",
+    "tags": ["trippy", "kaleidoscope"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_spiral.lua",
+    "name": "Hypno spiral",
+    "author": "Spectre",
+    "description": "An endless zoom twisting into a spiral and back, round to cross and back.",
+    "tags": ["trippy", "hypnotic"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_dream.lua",
+    "name": "Dream",
+    "author": "Spectre",
+    "description": "Breathing, crawling contour lines over drifting colors, like the walls on a trip.",
+    "tags": ["trippy", "hallucination"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_moire.lua",
+    "name": "Moire",
+    "author": "Spectre",
+    "description": "Op-art: interference patterns from five ring sources, boiling, inverted on the kick.",
+    "tags": ["trippy", "op-art"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_hyper.lua",
+    "name": "Hyper",
+    "author": "Spectre",
+    "description": "A tesseract and a 16-cell turning in four dimensions, phosphor trails, RGB glitches.",
+    "tags": ["3d", "hacker"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_hacker.lua",
+    "name": "Hacker",
+    "author": "Spectre",
+    "description": "Bit streams rushing out along the arms, a glitching terminal in the center.",
+    "tags": ["hacker", "techno"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_outrun.lua",
+    "name": "Outrun",
+    "author": "Spectre",
+    "description": "Synthwave: a striped sunset in the top arm, mountains, a neon grid racing below.",
+    "tags": ["synthwave", "3d"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_dealer.lua",
+    "name": "Dealer",
+    "author": "Spectre",
+    "description": "The pharmacy sign that sells the fun stuff: PHARMA turns DEALER, the menu, the clock stuck at 04:20.",
+    "tags": ["funny", "pharmacy"],
+    "layout": "cross"
+  },
+  {
+    "file": "lua/cross_nohealth.lua",
+    "name": "No health",
+    "author": "Spectre",
+    "description": "The pharmacy that doesn't want your health: heart rate through the roof, acid smiley, side effects.",
+    "tags": ["funny", "pharmacy"],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/cross_pulse_96x96.gif",
+    "name": "Cross heartbeat",
+    "author": "Spectre",
+    "description": "The green cross beating like a heart, waves flowing out.",
+    "tags": ["pharmacy"],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/cross_rings_96x96.gif",
+    "name": "Cross rings",
+    "author": "Spectre",
+    "description": "Rainbow crosses zooming out forever.",
+    "tags": ["trippy"],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/plasma_64x32.gif",
+    "name": "Plasma",
+    "author": "Spectre",
+    "description": "The demoscene classic, a seamless loop.",
+    "tags": ["demoscene"]
+  },
+  {
+    "file": "gif/tunnel_64x32.gif",
+    "name": "Rainbow tunnel",
+    "author": "Spectre",
+    "description": "A striped tunnel, a seamless loop.",
+    "tags": ["demoscene", "3d"]
+  }
+]

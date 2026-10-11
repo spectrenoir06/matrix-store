@@ -1,0 +1,269 @@
+{
+ "version": 1,
+ "updated": "2026-10-11T15:25:42Z",
+ "items": [
+  {
+   "id": "cross_pharma",
+   "kind": "lua",
+   "file": "lua/cross_pharma.lua",
+   "name": "Pharma techno",
+   "author": "Spectre",
+   "description": "The pharmacy cross at 130 BPM: pulse, tunnel, arms chase, scanner, heartbeat, glitch, spinning plus.",
+   "tags": [
+    "pharmacy",
+    "techno"
+   ],
+   "size": 3529,
+   "crc32": 2246333830,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_tunnel",
+   "kind": "lua",
+   "file": "lua/cross_tunnel.lua",
+   "name": "Cross tunnel",
+   "author": "Spectre",
+   "description": "Flying down an endless plus-shaped tube, faster on the kick, four palettes.",
+   "tags": [
+    "3d",
+    "techno",
+    "trippy"
+   ],
+   "size": 2521,
+   "crc32": 4218943198,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_vicsek",
+   "kind": "lua",
+   "file": "lua/cross_vicsek.lua",
+   "name": "Vicsek zoom",
+   "author": "Spectre",
+   "description": "The cross is the first step of the Vicsek fractal: an endless zoom into it.",
+   "tags": [
+    "fractal",
+    "trippy"
+   ],
+   "size": 1862,
+   "crc32": 3723703787,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_julia",
+   "kind": "lua",
+   "file": "lua/cross_julia.lua",
+   "name": "Julia cross",
+   "author": "Spectre",
+   "description": "The Julia set of z^4 + c, a fractal shaped like a cross, breathing and morphing.",
+   "tags": [
+    "fractal",
+    "trippy"
+   ],
+   "size": 1657,
+   "crc32": 851327367,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_mandala",
+   "kind": "lua",
+   "file": "lua/cross_mandala.lua",
+   "name": "Mandala",
+   "author": "Spectre",
+   "description": "Polar plasma: waving petals, rings and crosses flowing out of the center.",
+   "tags": [
+    "kaleidoscope",
+    "trippy"
+   ],
+   "size": 2145,
+   "crc32": 4156356835,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_spiral",
+   "kind": "lua",
+   "file": "lua/cross_spiral.lua",
+   "name": "Hypno spiral",
+   "author": "Spectre",
+   "description": "An endless zoom twisting into a spiral and back, round to cross and back.",
+   "tags": [
+    "hypnotic",
+    "trippy"
+   ],
+   "size": 2176,
+   "crc32": 1993022524,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_dream",
+   "kind": "lua",
+   "file": "lua/cross_dream.lua",
+   "name": "Dream",
+   "author": "Spectre",
+   "description": "Breathing, crawling contour lines over drifting colors, like the walls on a trip.",
+   "tags": [
+    "hallucination",
+    "trippy"
+   ],
+   "size": 1500,
+   "crc32": 1288174671,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_moire",
+   "kind": "lua",
+   "file": "lua/cross_moire.lua",
+   "name": "Moire",
+   "author": "Spectre",
+   "description": "Op-art: interference patterns from five ring sources, boiling, inverted on the kick.",
+   "tags": [
+    "op-art",
+    "trippy"
+   ],
+   "size": 1726,
+   "crc32": 1488719346,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_hyper",
+   "kind": "lua",
+   "file": "lua/cross_hyper.lua",
+   "name": "Hyper",
+   "author": "Spectre",
+   "description": "A tesseract and a 16-cell turning in four dimensions, phosphor trails, RGB glitches.",
+   "tags": [
+    "3d",
+    "hacker"
+   ],
+   "size": 2839,
+   "crc32": 2533497077,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_hacker",
+   "kind": "lua",
+   "file": "lua/cross_hacker.lua",
+   "name": "Hacker",
+   "author": "Spectre",
+   "description": "Bit streams rushing out along the arms, a glitching terminal in the center.",
+   "tags": [
+    "hacker",
+    "techno"
+   ],
+   "size": 2422,
+   "crc32": 1861965579,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_outrun",
+   "kind": "lua",
+   "file": "lua/cross_outrun.lua",
+   "name": "Outrun",
+   "author": "Spectre",
+   "description": "Synthwave: a striped sunset in the top arm, mountains, a neon grid racing below.",
+   "tags": [
+    "3d",
+    "synthwave"
+   ],
+   "size": 2292,
+   "crc32": 118142905,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_dealer",
+   "kind": "lua",
+   "file": "lua/cross_dealer.lua",
+   "name": "Dealer",
+   "author": "Spectre",
+   "description": "The pharmacy sign that sells the fun stuff: PHARMA turns DEALER, the menu, the clock stuck at 04:20.",
+   "tags": [
+    "funny",
+    "pharmacy"
+   ],
+   "size": 2598,
+   "crc32": 2412030661,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_nohealth",
+   "kind": "lua",
+   "file": "lua/cross_nohealth.lua",
+   "name": "No health",
+   "author": "Spectre",
+   "description": "The pharmacy that doesn't want your health: heart rate through the roof, acid smiley, side effects.",
+   "tags": [
+    "funny",
+    "pharmacy"
+   ],
+   "size": 2454,
+   "crc32": 2728067437,
+   "layout": "cross"
+  },
+  {
+   "id": "cross_pulse_96x96",
+   "kind": "gif",
+   "file": "gif/cross_pulse_96x96.gif",
+   "name": "Cross heartbeat",
+   "author": "Spectre",
+   "description": "The green cross beating like a heart, waves flowing out.",
+   "tags": [
+    "pharmacy"
+   ],
+   "size": 68931,
+   "crc32": 1868214502,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 40
+  },
+  {
+   "id": "cross_rings_96x96",
+   "kind": "gif",
+   "file": "gif/cross_rings_96x96.gif",
+   "name": "Cross rings",
+   "author": "Spectre",
+   "description": "Rainbow crosses zooming out forever.",
+   "tags": [
+    "trippy"
+   ],
+   "size": 59166,
+   "crc32": 1443687008,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 48
+  },
+  {
+   "id": "plasma_64x32",
+   "kind": "gif",
+   "file": "gif/plasma_64x32.gif",
+   "name": "Plasma",
+   "author": "Spectre",
+   "description": "The demoscene classic, a seamless loop.",
+   "tags": [
+    "demoscene"
+   ],
+   "size": 128633,
+   "crc32": 1897580196,
+   "width": 64,
+   "height": 32,
+   "frames": 40
+  },
+  {
+   "id": "tunnel_64x32",
+   "kind": "gif",
+   "file": "gif/tunnel_64x32.gif",
+   "name": "Rainbow tunnel",
+   "author": "Spectre",
+   "description": "A striped tunnel, a seamless loop.",
+   "tags": [
+    "3d",
+    "demoscene"
+   ],
+   "size": 129928,
+   "crc32": 3425512160,
+   "width": 64,
+   "height": 32,
+   "frames": 48
+  }
+ ]
+}
