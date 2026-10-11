@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-11T19:21:16Z",
+ "updated": "2026-10-11T19:31:50Z",
  "items": [
   {
    "id": "cross_pharma",
@@ -208,8 +208,8 @@
    "tags": [
     "pharmacy"
    ],
-   "size": 68931,
-   "crc32": 1868214502,
+   "size": 65397,
+   "crc32": 3531380096,
    "layout": "cross",
    "width": 96,
    "height": 96,
@@ -225,8 +225,8 @@
    "tags": [
     "trippy"
    ],
-   "size": 59166,
-   "crc32": 1443687008,
+   "size": 54215,
+   "crc32": 1403964940,
    "layout": "cross",
    "width": 96,
    "height": 96,
@@ -905,8 +905,8 @@
     "logo",
     "rainbow"
    ],
-   "size": 150362,
-   "crc32": 215613682,
+   "size": 134920,
+   "crc32": 9358880,
    "width": 64,
    "height": 32,
    "frames": 177
@@ -923,8 +923,8 @@
     "pokemon",
     "rainbow"
    ],
-   "size": 576357,
-   "crc32": 3345713425,
+   "size": 570242,
+   "crc32": 398188381,
    "width": 64,
    "height": 32,
    "frames": 769
@@ -941,8 +941,8 @@
     "computer",
     "retro"
    ],
-   "size": 1900937,
-   "crc32": 1883344921,
+   "size": 1750442,
+   "crc32": 2500773645,
    "width": 64,
    "height": 32,
    "frames": 1800
@@ -958,11 +958,11 @@
     "pixel-art",
     "pokemon"
    ],
-   "size": 2374333,
-   "crc32": 3358777387,
+   "size": 1865364,
+   "crc32": 2556686899,
    "width": 64,
    "height": 32,
-   "frames": 5806
+   "frames": 4672
   },
   {
    "id": "banana",
@@ -975,8 +975,8 @@
     "banane",
     "fruit"
    ],
-   "size": 1122887,
-   "crc32": 1439125762,
+   "size": 677769,
+   "crc32": 2554569043,
    "width": 64,
    "height": 32,
    "frames": 605
@@ -1028,12 +1028,12 @@
     "physics",
     "pokemon"
    ],
-   "size": 2972222,
-   "crc32": 3418034267,
+   "size": 428909,
+   "crc32": 4292429235,
    "layout": "cross",
    "width": 96,
    "height": 96,
-   "frames": 2262
+   "frames": 2208
   },
   {
    "id": "water_100fps",
