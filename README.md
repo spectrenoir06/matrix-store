@@ -24,7 +24,7 @@ follows this repo's `main` branch (`scripts/sync-store.sh`, every 15 min).
 Check scripts on a real matrix first: Lua has 30 KB there, compiling
 included (keep scripts under 4 KB), and the cross shows 4 bits a color
 (values under 77 of 255 are black). The app's Lua API: `src/lua/README.md`
-in [spectre-bt-app](https://github.com/acondolu/spectre-bt-app).
+in [spectre-bt-app](https://github.com/spectrenoir06/spectre-bt-app).
 
 ## Files
 
