@@ -64,10 +64,10 @@ def build():
         if kind == "lua":
             if len(data) > LUA_MAX:
                 fail(f"{f}: {len(data)} B, keep Lua scripts under {LUA_MAX} B (30 KB to compile and run)")
-            try:
-                data.decode("ascii")
-            except UnicodeDecodeError:
-                fail(f"{f}: plain ASCII only (the matrix's font)")
+            # what it prints: plain ASCII (the matrix's font); comments can be anything
+            code = "\n".join(line.split("--", 1)[0] for line in data.decode("utf-8", "replace").splitlines())
+            if any(ord(c) > 126 for c in code):
+                fail(f"{f}: non-ASCII outside comments (the matrix's font is plain ASCII)")
         else:
             if len(data) > GIF_MAX:
                 fail(f"{f}: {len(data)} B, keep GIFs under {GIF_MAX} B")

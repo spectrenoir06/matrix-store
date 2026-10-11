@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-11T15:25:42Z",
+ "updated": "2026-10-11T17:42:40Z",
  "items": [
   {
    "id": "cross_pharma",
@@ -264,6 +264,587 @@
    "width": 64,
    "height": 32,
    "frames": 48
+  },
+  {
+   "id": "clock_analog",
+   "kind": "lua",
+   "file": "lua/clock_analog.lua",
+   "name": "Analog clock",
+   "author": "Spectre",
+   "description": "A round face with hands and a smooth second hand, the time and date beside it.",
+   "tags": [
+    "clock"
+   ],
+   "size": 2247,
+   "crc32": 2249247120
+  },
+  {
+   "id": "clock_binary",
+   "kind": "lua",
+   "file": "lua/clock_binary.lua",
+   "name": "Binary clock",
+   "author": "Spectre",
+   "description": "Each digit of HH MM SS as a column of four lights: add up the lit ones.",
+   "tags": [
+    "clock"
+   ],
+   "size": 1637,
+   "crc32": 1091788965
+  },
+  {
+   "id": "clock_digital",
+   "kind": "lua",
+   "file": "lua/clock_digital.lua",
+   "name": "Digital clock",
+   "author": "Spectre",
+   "description": "Big hours and minutes, the date, the seconds as a bar; the color follows the time of day.",
+   "tags": [
+    "clock"
+   ],
+   "size": 1932,
+   "crc32": 1915132072
+  },
+  {
+   "id": "clock_words",
+   "kind": "lua",
+   "file": "lua/clock_words.lua",
+   "name": "Word clock",
+   "author": "Spectre",
+   "description": "The time in words, to the nearest five minutes (English or French).",
+   "tags": [
+    "clock"
+   ],
+   "size": 3061,
+   "crc32": 2563812106
+  },
+  {
+   "id": "info_countdown",
+   "kind": "lua",
+   "file": "lua/info_countdown.lua",
+   "name": "Countdown",
+   "author": "Spectre",
+   "description": "Days, then hours, minutes and seconds to a date you set in the script; it celebrates at zero.",
+   "tags": [
+    "clock",
+    "info"
+   ],
+   "size": 2339,
+   "crc32": 1971849813
+  },
+  {
+   "id": "info_progress",
+   "kind": "lua",
+   "file": "lua/info_progress.lua",
+   "name": "How far along",
+   "author": "Spectre",
+   "description": "The day, the week, the month and the year, as progress bars.",
+   "tags": [
+    "clock",
+    "info"
+   ],
+   "size": 2091,
+   "crc32": 2771266979
+  },
+  {
+   "id": "fx_comets",
+   "kind": "lua",
+   "file": "lua/fx_comets.lua",
+   "name": "Comets",
+   "author": "Spectre",
+   "description": "Bouncing dots with fading trails; on the cross they bounce off the arms and corners.",
+   "tags": [
+    "effect"
+   ],
+   "size": 1747,
+   "crc32": 2160454051
+  },
+  {
+   "id": "fx_fire",
+   "kind": "lua",
+   "file": "lua/fx_fire.lua",
+   "name": "Fire",
+   "author": "Spectre",
+   "description": "Flames rising from the bottom.",
+   "tags": [
+    "effect"
+   ],
+   "size": 1933,
+   "crc32": 3899157100
+  },
+  {
+   "id": "fx_invaders",
+   "kind": "lua",
+   "file": "lua/fx_invaders.lua",
+   "name": "Space invaders",
+   "author": "Spectre",
+   "description": "Marching invaders and a cannon shooting back.",
+   "tags": [
+    "game",
+    "retro"
+   ],
+   "size": 1965,
+   "crc32": 1028316999
+  },
+  {
+   "id": "fx_kaleido",
+   "kind": "lua",
+   "file": "lua/fx_kaleido.lua",
+   "name": "Kaleidoscope",
+   "author": "Spectre",
+   "description": "Ribbons mirrored eight ways, fading out.",
+   "tags": [
+    "effect",
+    "kaleidoscope",
+    "trippy"
+   ],
+   "size": 1011,
+   "crc32": 738230267
+  },
+  {
+   "id": "fx_lava",
+   "kind": "lua",
+   "file": "lua/fx_lava.lua",
+   "name": "Lava",
+   "author": "Spectre",
+   "description": "Two layers of smooth noise turned into hot colors.",
+   "tags": [
+    "effect"
+   ],
+   "size": 782,
+   "crc32": 2075130103
+  },
+  {
+   "id": "fx_lissajous",
+   "kind": "lua",
+   "file": "lua/fx_lissajous.lua",
+   "name": "Lissajous",
+   "author": "Spectre",
+   "description": "A point tracing curves that slowly change shape, with a fading trail.",
+   "tags": [
+    "effect"
+   ],
+   "size": 1146,
+   "crc32": 3088961821
+  },
+  {
+   "id": "fx_metaballs",
+   "kind": "lua",
+   "file": "lua/fx_metaballs.lua",
+   "name": "Metaballs",
+   "author": "Spectre",
+   "description": "Blobs of light merging and splitting like a lava lamp.",
+   "tags": [
+    "effect"
+   ],
+   "size": 1255,
+   "crc32": 279924060
+  },
+  {
+   "id": "fx_moire",
+   "kind": "lua",
+   "file": "lua/fx_moire.lua",
+   "name": "RGB moire",
+   "author": "Spectre",
+   "description": "Three sets of rings, red, green and blue, wandering and interfering.",
+   "tags": [
+    "effect",
+    "op-art",
+    "trippy"
+   ],
+   "size": 2289,
+   "crc32": 2825714727
+  },
+  {
+   "id": "fx_moire_zone",
+   "kind": "lua",
+   "file": "lua/fx_moire_zone.lua",
+   "name": "Zone plate",
+   "author": "Spectre",
+   "description": "Rings closer and closer to the edges: ghost circles appear where the LEDs can't follow.",
+   "tags": [
+    "effect",
+    "op-art",
+    "trippy"
+   ],
+   "size": 1444,
+   "crc32": 2682985799
+  },
+  {
+   "id": "fx_qix",
+   "kind": "lua",
+   "file": "lua/fx_qix.lua",
+   "name": "Qix",
+   "author": "Spectre",
+   "description": "Lines gliding and swirling with a trail, after the arcade classic.",
+   "tags": [
+    "effect",
+    "retro"
+   ],
+   "size": 3280,
+   "crc32": 1932183260
+  },
+  {
+   "id": "fx_rain",
+   "kind": "lua",
+   "file": "lua/fx_rain.lua",
+   "name": "Digital rain",
+   "author": "Spectre",
+   "description": "Green streams falling down each column.",
+   "tags": [
+    "effect",
+    "hacker"
+   ],
+   "size": 1180,
+   "crc32": 2200043408
+  },
+  {
+   "id": "fx_rotozoom",
+   "kind": "lua",
+   "file": "lua/fx_rotozoom.lua",
+   "name": "Rotozoom",
+   "author": "Spectre",
+   "description": "A checkerboard turning and zooming, the demoscene classic.",
+   "tags": [
+    "demoscene",
+    "effect"
+   ],
+   "size": 1206,
+   "crc32": 1378812641
+  },
+  {
+   "id": "fx_starfield",
+   "kind": "lua",
+   "file": "lua/fx_starfield.lua",
+   "name": "Starfield",
+   "author": "Spectre",
+   "description": "Flying through space, stars streaming out from the center.",
+   "tags": [
+    "3d",
+    "effect"
+   ],
+   "size": 1406,
+   "crc32": 860167365
+  },
+  {
+   "id": "fx_tunnel",
+   "kind": "lua",
+   "file": "lua/fx_tunnel.lua",
+   "name": "Tunnel",
+   "author": "Spectre",
+   "description": "Flying down an endless striped tube.",
+   "tags": [
+    "3d",
+    "demoscene",
+    "effect"
+   ],
+   "size": 2204,
+   "crc32": 718512353
+  },
+  {
+   "id": "matrix",
+   "kind": "lua",
+   "file": "lua/matrix.lua",
+   "name": "Matrix rain",
+   "author": "Spectre",
+   "description": "Green drops falling with bright heads and fading tails.",
+   "tags": [
+    "effect",
+    "hacker"
+   ],
+   "size": 1019,
+   "crc32": 3667067479
+  },
+  {
+   "id": "rainbow",
+   "kind": "lua",
+   "file": "lua/rainbow.lua",
+   "name": "Rainbow",
+   "author": "Spectre",
+   "description": "A rainbow scrolling across the panel: the smallest script.",
+   "tags": [
+    "effect",
+    "starter"
+   ],
+   "size": 217,
+   "crc32": 635996338
+  },
+  {
+   "id": "shapes",
+   "kind": "lua",
+   "file": "lua/shapes.lua",
+   "name": "Shapes",
+   "author": "Spectre",
+   "description": "A radar sweep, a spinning triangle, bouncing circles, a breathing frame.",
+   "tags": [
+    "effect",
+    "starter"
+   ],
+   "size": 1625,
+   "crc32": 3841021915
+  },
+  {
+   "id": "spirograph",
+   "kind": "lua",
+   "file": "lua/spirograph.lua",
+   "name": "Spirograph",
+   "author": "Spectre",
+   "description": "A spirograph drawn a few lines at a time, a new one every ten seconds.",
+   "tags": [
+    "effect"
+   ],
+   "size": 1298,
+   "crc32": 337407657
+  },
+  {
+   "id": "sim_balls",
+   "kind": "lua",
+   "file": "lua/sim_balls.lua",
+   "name": "Bouncing balls",
+   "author": "Spectre",
+   "description": "Gravity, bounces off the walls and off each other; on the cross they rest on the arms.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 2901,
+   "crc32": 1081907509
+  },
+  {
+   "id": "sim_boids",
+   "kind": "lua",
+   "file": "lua/sim_boids.lua",
+   "name": "Boids",
+   "author": "Spectre",
+   "description": "A flock of birds keeping together; the color shows where each one heads.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 2070,
+   "crc32": 328335517
+  },
+  {
+   "id": "sim_langton",
+   "kind": "lua",
+   "file": "lua/sim_langton.lua",
+   "name": "Langton's ants",
+   "author": "Spectre",
+   "description": "Three ants flipping cells: chaos, then highways.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 1594,
+   "crc32": 2321201520
+  },
+  {
+   "id": "sim_life",
+   "kind": "lua",
+   "file": "lua/sim_life.lua",
+   "name": "Game of Life",
+   "author": "Spectre",
+   "description": "Conway's cells, born bright and calming down; restarts when it gets stuck.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 2318,
+   "crc32": 447287347
+  },
+  {
+   "id": "sim_pendulum",
+   "kind": "lua",
+   "file": "lua/sim_pendulum.lua",
+   "name": "Double pendulum",
+   "author": "Spectre",
+   "description": "Two arms, gravity, chaos, and a fading rainbow trail.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 2314,
+   "crc32": 2595399156
+  },
+  {
+   "id": "sim_sand",
+   "kind": "lua",
+   "file": "lua/sim_sand.lua",
+   "name": "Falling sand",
+   "author": "Spectre",
+   "description": "Colored grains pouring and piling up; on the cross they fill the arms.",
+   "tags": [
+    "simulation"
+   ],
+   "size": 3139,
+   "crc32": 1573443967
+  },
+  {
+   "id": "sound_bars",
+   "kind": "lua",
+   "file": "lua/sound_bars.lua",
+   "name": "Spectrum bars",
+   "author": "Spectre",
+   "description": "The sound's spectrum as bars, a flash on the beat. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 743,
+   "crc32": 2633578123
+  },
+  {
+   "id": "sound_eq",
+   "kind": "lua",
+   "file": "lua/sound_eq.lua",
+   "name": "Equalizer",
+   "author": "Spectre",
+   "description": "Hi-fi bars from green to red with slowly falling peaks. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 1353,
+   "crc32": 2303011593
+  },
+  {
+   "id": "sound_fireworks",
+   "kind": "lua",
+   "file": "lua/sound_fireworks.lua",
+   "name": "Sound fireworks",
+   "author": "Spectre",
+   "description": "Each beat bursts a rocket of sparks. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 2015,
+   "crc32": 1527623170
+  },
+  {
+   "id": "sound_history",
+   "kind": "lua",
+   "file": "lua/sound_history.lua",
+   "name": "Sound history",
+   "author": "Spectre",
+   "description": "The sound scrolling by like a track's waveform. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 1036,
+   "crc32": 3289450256
+  },
+  {
+   "id": "sound_plasma",
+   "kind": "lua",
+   "file": "lua/sound_plasma.lua",
+   "name": "Bass plasma",
+   "author": "Spectre",
+   "description": "Plasma dancing to the bass: faster and brighter when it hits. Needs the matrix's microphone.",
+   "tags": [
+    "sound",
+    "trippy"
+   ],
+   "size": 1143,
+   "crc32": 1081141593
+  },
+  {
+   "id": "sound_rings",
+   "kind": "lua",
+   "file": "lua/sound_rings.lua",
+   "name": "Beat rings",
+   "author": "Spectre",
+   "description": "Each beat sends a ring of color out from the center. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 1360,
+   "crc32": 2819519828
+  },
+  {
+   "id": "sound_sun",
+   "kind": "lua",
+   "file": "lua/sound_sun.lua",
+   "name": "Sound sun",
+   "author": "Spectre",
+   "description": "Rays all around, one per frequency band, slowly turning. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 1787,
+   "crc32": 3400685691
+  },
+  {
+   "id": "sound_text",
+   "kind": "lua",
+   "file": "lua/sound_text.lua",
+   "name": "Beat word",
+   "author": "Spectre",
+   "description": "A word that jumps on every beat. Needs the matrix's microphone.",
+   "tags": [
+    "sound",
+    "text"
+   ],
+   "size": 1248,
+   "crc32": 1925833329
+  },
+  {
+   "id": "sound_waterfall",
+   "kind": "lua",
+   "file": "lua/sound_waterfall.lua",
+   "name": "Spectrogram",
+   "author": "Spectre",
+   "description": "Time scrolls up, bass on the left, loud is hot. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 1377,
+   "crc32": 1267208774
+  },
+  {
+   "id": "sound_wave",
+   "kind": "lua",
+   "file": "lua/sound_wave.lua",
+   "name": "Oscilloscope",
+   "author": "Spectre",
+   "description": "The microphone's waveform. Needs the matrix's microphone.",
+   "tags": [
+    "sound"
+   ],
+   "size": 567,
+   "crc32": 1770503753
+  },
+  {
+   "id": "text_scroll",
+   "kind": "lua",
+   "file": "lua/text_scroll.lua",
+   "name": "Text scroll",
+   "author": "Spectre",
+   "description": "A message scrolling across in rainbow letters: change the text in the script.",
+   "tags": [
+    "starter",
+    "text"
+   ],
+   "size": 931,
+   "crc32": 1066298774
+  },
+  {
+   "id": "Hello_World_rainbow",
+   "kind": "lua",
+   "file": "lua/Hello_World_rainbow.lua",
+   "name": "Hello World",
+   "author": "Spectre",
+   "description": "Hello World in rainbow colors: a first script to start from.",
+   "tags": [
+    "starter",
+    "text"
+   ],
+   "size": 793,
+   "crc32": 2652479916
+  },
+  {
+   "id": "hello_console",
+   "kind": "lua",
+   "file": "lua/hello_console.lua",
+   "name": "Hello console",
+   "author": "Spectre",
+   "description": "Prints to the app's console (Code editor), nothing on the matrix: printBLE for debugging.",
+   "tags": [
+    "starter"
+   ],
+   "size": 103,
+   "crc32": 3974360856
   }
  ]
 }
