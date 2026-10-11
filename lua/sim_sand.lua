@@ -1,96 +1,97 @@
 -- Falling sand: colored grains pour from a moving spout and pile up,
 -- sliding down the slopes. When the pile reaches the top: start again.
--- Where grains are: bits (32 per integer). Their color: on the screen.
--- No panel (the cross's corners) is a wall: sand piles on the arms.
+-- A grain is a lit pixel (the screen is the grid: no table); no panel (the
+-- cross's corners) is a wall. Fast: only where something can move is looked
+-- at, a span per row, not the whole pile.
 local mx, my = getMatrix()
-local random, floor = math.random, math.floor
--- the panels' shape (no corners on the cross): per row, the first and last
--- pixel that lights, as first * 1024 + last
-local S = {}
-for y = 0, my - 1 do
+local random = math.random
+-- per row: the panels (first*1024+last pixel that lights), the span to check
+local S, D = {}, {}
+for y = 1, my do
   local a, b = mx, -1
   for x = 0, mx - 1 do
-    drawPixel(x, y, 255, 255, 255)
-    if getPixel(x, y) > 0 then
+    drawPixel(x, y - 1, 255, 255, 255)
+    if getPixel(x, y - 1) > 0 then
       if x < a then a = x end
       b = x
     end
   end
-  S[y + 1] = a * 1024 + b
+  S[y], D[y] = a * 1024 + b, -1
 end
-clearDisplay()
-local function on(x, y)
-  if y < 0 or y >= my then return false end
-  local s = S[y + 1]
-  return x >= s // 1024 and x <= s % 1024
-end
-local WORDS = (mx + 31) // 32
-local occ = {}
-local function clear_all()
-  for i = 1, WORDS * my do occ[i] = 0 end
-  clearDisplay(); updateDisplay(true)
-end
-local function is(x, y)
+local function is(x, y) -- a grain or a wall
   if y < 0 then return false end
-  if not on(x, y) then return true end -- walls, floor, no panel
-  return (occ[y * WORDS + (x >> 5) + 1] >> (x & 31)) & 1 == 1
+  if y >= my then return true end
+  local s = S[y + 1]
+  if x < s // 1024 or x > s % 1024 then return true end
+  local r, g, b = getPixel(x, y)
+  return r + g + b > 0
 end
-local function set(x, y, on)
-  local i = y * WORDS + (x >> 5) + 1
-  if on then occ[i] = occ[i] | (1 << (x & 31)) else occ[i] = occ[i] & ~(1 << (x & 31)) end
+local function mark(y, a, b) -- look at row y, x a..b
+  if y < 0 then return end
+  if a < 0 then a = 0 end
+  if b >= mx then b = mx - 1 end
+  local s = D[y + 1]
+  if s >= 0 then
+    if s // 1024 < a then a = s // 1024 end
+    if s % 1024 > b then b = s % 1024 end
+  end
+  D[y + 1] = a * 1024 + b
 end
-clear_all()
 local L1, R1 = S[1] // 1024, S[1] % 1024 -- the top row: where the spout moves
 local spout, dir, hue, t, blocked = (L1 + R1) // 2, 1, 0, 0, 0
--- ~60 frames/s at most: the same speed on the matrix and in the app
+clearDisplay(); updateDisplay(true)
 local t_next = millis()
-local function pace(ms)
-  t_next = t_next + (ms or 16)
-  local wait = t_next - millis()
-  if wait > 0 then delay(wait) else t_next = millis() end
-end
 while true do
-  -- new grains
   local added = 0
-  for k = 1, 2 do
+  for k = 1, 2 do -- new grains
     local x = spout + random(-1, 1)
-    if x >= 0 and x < mx and not is(x, 0) then
-      local r, g, b = colorWheel(hue)
-      set(x, 0, true)
-      drawPixel(x, 0, r, g, b)
+    if not is(x, 0) then
+      drawPixel(x, 0, colorWheel(hue))
+      mark(0, x, x)
       added = added + 1
     end
   end
-  -- fall, from the bottom up; rows scanned in alternating directions
+  -- fall, bottom up (rows each way in turn): a row's span is taken as it is
+  -- looked at; marks above count this frame, marks below the next
   for y = my - 2, 0, -1 do
-    local x0, x1, step = 0, mx - 1, 1
-    if (y + t) % 2 == 1 then x0, x1, step = mx - 1, 0, -1 end
-    for x = x0, x1, step do
-      if on(x, y) and is(x, y) then -- a grain (not a wall: is() says walls too)
-        local nx = nil
-        if not is(x, y + 1) then nx = x
-        else
-          local a, b = x - 1, x + 1
-          if random(0, 1) == 1 then a, b = b, a end
-          if not is(a, y + 1) then nx = a elseif not is(b, y + 1) then nx = b end
-        end
-        if nx then
-          local r, g, b = getPixel(x, y)
-          set(x, y, false); set(nx, y + 1, true)
-          drawPixel(x, y, 0, 0, 0)
-          drawPixel(nx, y + 1, r, g, b)
+    local s = D[y + 1]
+    if s >= 0 then
+      D[y + 1] = -1
+      local x0, x1, step = s // 1024, s % 1024, 1
+      if (y + t) % 2 == 1 then x0, x1, step = x1, x0, -1 end
+      for x = x0, x1, step do
+        local r, g, b = getPixel(x, y)
+        if r + g + b > 0 then
+          local nx
+          if not is(x, y + 1) then nx = x
+          else
+            local a, c = x - 1, x + 1
+            if random(0, 1) == 1 then a, c = c, a end
+            if not is(a, y + 1) then nx = a elseif not is(c, y + 1) then nx = c end
+          end
+          if nx then
+            drawPixel(x, y, 0, 0, 0)
+            drawPixel(nx, y + 1, r, g, b)
+            mark(y + 1, nx, nx) -- it falls on
+            mark(y - 1, x - 1, x + 1) -- those above may follow
+          end
         end
       end
     end
   end
-  updateDisplay(true) -- the next frame starts from this one: only changes are drawn
-  -- the spout wanders, the color shifts
+  updateDisplay(true) -- the next frame starts from this one
   spout = spout + dir
   if spout <= L1 + 2 or spout >= R1 - 2 or random(0, 40) == 0 then dir = -dir end
   hue = (hue + 1) % 256
   t = t + 1
-  -- full (the spout can't pour for a while): again
   if added == 0 then blocked = blocked + 1 else blocked = 0 end
-  if blocked > 40 then delay(800); clear_all(); blocked = 0 end
-  pace(25)
+  if blocked > 40 then -- full: again
+    delay(800)
+    clearDisplay(); updateDisplay(true)
+    for y = 1, my do D[y] = -1 end
+    blocked = 0
+  end
+  t_next = t_next + 25
+  local w = t_next - millis()
+  if w > 0 then delay(w) else t_next = millis() end
 end
