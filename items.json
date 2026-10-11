@@ -590,5 +590,113 @@
     "tags": [
       "starter"
     ]
+  },
+  {
+    "file": "gif/42.gif",
+    "name": "42",
+    "author": "Spectre",
+    "description": "The 42 logo over a rainbow that keeps turning.",
+    "tags": [
+      "logo",
+      "rainbow"
+    ]
+  },
+  {
+    "file": "gif/ditto.gif",
+    "name": "Ditto",
+    "author": "Spectre",
+    "description": "A line of Dittos marching over a rainbow.",
+    "tags": [
+      "pokemon",
+      "pixel-art",
+      "rainbow"
+    ]
+  },
+  {
+    "file": "gif/windows95.gif",
+    "name": "Windows 95",
+    "author": "Spectre",
+    "description": "The Windows 95 3D screensaver: cubes, stars and shapes tumbling through the dark.",
+    "tags": [
+      "retro",
+      "computer",
+      "3d"
+    ]
+  },
+  {
+    "file": "gif/pkm32.gif",
+    "name": "Pokemon parade",
+    "author": "Spectre",
+    "description": "Pokemon sprites walking by one after the other.",
+    "tags": [
+      "pokemon",
+      "pixel-art"
+    ]
+  },
+  {
+    "file": "gif/banana.gif",
+    "name": "Banana rain",
+    "author": "Spectre",
+    "description": "Bananas tumbling down, the Banane's own.",
+    "tags": [
+      "banane",
+      "fruit"
+    ]
+  },
+  {
+    "file": "gif/pacman_full.gif",
+    "name": "Pac-Man",
+    "author": "Spectre",
+    "description": "A Pac-Man maze shaped like the cross: Pac-Man, the ghosts, flashing rainbow walls.",
+    "tags": [
+      "retro",
+      "game"
+    ],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/pills2.gif",
+    "name": "Pills",
+    "author": "Spectre",
+    "description": "Pills falling from the top and piling up until they fill the cross.",
+    "tags": [
+      "pharmacy",
+      "physics"
+    ],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/pokeballs.gif",
+    "name": "Pokeballs",
+    "author": "Spectre",
+    "description": "Pokeballs falling and piling up until they fill the cross.",
+    "tags": [
+      "pokemon",
+      "physics"
+    ],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/water_100fps.gif",
+    "name": "Water",
+    "author": "Spectre",
+    "description": "Water pouring in, filling the bottom arm, then the sides, at 100 frames a second.",
+    "tags": [
+      "physics",
+      "calm"
+    ],
+    "layout": "cross"
+  },
+  {
+    "file": "gif/fluid_rainbow.gif",
+    "name": "Fluid rainbow",
+    "author": "Spectre",
+    "description": "Rainbow fluid pouring in and filling the cross in colored layers.",
+    "tags": [
+      "physics",
+      "rainbow",
+      "trippy"
+    ],
+    "layout": "cross"
   }
 ]

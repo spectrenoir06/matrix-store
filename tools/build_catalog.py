@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 KINDS = {".lua": "lua", ".gif": "gif"}
 LAYOUTS = {"cross"}  # a layout an item needs; none: any board
 LUA_MAX = 4096  # bytes: bigger scripts tend to run out of memory compiling (30 KB in all)
-GIF_MAX = 300_000
+GIF_MAX = 4_000_000  # bytes: boards keep GIFs on SD cards; the Store shows the size
 # needs: what a script uses beyond the panel, found in its code
 NEEDS = {
     "mic": r"\bget(FFT|Wave)\s*\(",  # the microphone

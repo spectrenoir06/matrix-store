@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-11T18:58:02Z",
+ "updated": "2026-10-11T19:21:16Z",
  "items": [
   {
    "id": "cross_pharma",
@@ -893,6 +893,184 @@
    ],
    "size": 103,
    "crc32": 3974360856
+  },
+  {
+   "id": "42",
+   "kind": "gif",
+   "file": "gif/42.gif",
+   "name": "42",
+   "author": "Spectre",
+   "description": "The 42 logo over a rainbow that keeps turning.",
+   "tags": [
+    "logo",
+    "rainbow"
+   ],
+   "size": 150362,
+   "crc32": 215613682,
+   "width": 64,
+   "height": 32,
+   "frames": 177
+  },
+  {
+   "id": "ditto",
+   "kind": "gif",
+   "file": "gif/ditto.gif",
+   "name": "Ditto",
+   "author": "Spectre",
+   "description": "A line of Dittos marching over a rainbow.",
+   "tags": [
+    "pixel-art",
+    "pokemon",
+    "rainbow"
+   ],
+   "size": 576357,
+   "crc32": 3345713425,
+   "width": 64,
+   "height": 32,
+   "frames": 769
+  },
+  {
+   "id": "windows95",
+   "kind": "gif",
+   "file": "gif/windows95.gif",
+   "name": "Windows 95",
+   "author": "Spectre",
+   "description": "The Windows 95 3D screensaver: cubes, stars and shapes tumbling through the dark.",
+   "tags": [
+    "3d",
+    "computer",
+    "retro"
+   ],
+   "size": 1900937,
+   "crc32": 1883344921,
+   "width": 64,
+   "height": 32,
+   "frames": 1800
+  },
+  {
+   "id": "pkm32",
+   "kind": "gif",
+   "file": "gif/pkm32.gif",
+   "name": "Pokemon parade",
+   "author": "Spectre",
+   "description": "Pokemon sprites walking by one after the other.",
+   "tags": [
+    "pixel-art",
+    "pokemon"
+   ],
+   "size": 2374333,
+   "crc32": 3358777387,
+   "width": 64,
+   "height": 32,
+   "frames": 5806
+  },
+  {
+   "id": "banana",
+   "kind": "gif",
+   "file": "gif/banana.gif",
+   "name": "Banana rain",
+   "author": "Spectre",
+   "description": "Bananas tumbling down, the Banane's own.",
+   "tags": [
+    "banane",
+    "fruit"
+   ],
+   "size": 1122887,
+   "crc32": 1439125762,
+   "width": 64,
+   "height": 32,
+   "frames": 605
+  },
+  {
+   "id": "pacman_full",
+   "kind": "gif",
+   "file": "gif/pacman_full.gif",
+   "name": "Pac-Man",
+   "author": "Spectre",
+   "description": "A Pac-Man maze shaped like the cross: Pac-Man, the ghosts, flashing rainbow walls.",
+   "tags": [
+    "game",
+    "retro"
+   ],
+   "size": 2221506,
+   "crc32": 3919624672,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 1376
+  },
+  {
+   "id": "pills2",
+   "kind": "gif",
+   "file": "gif/pills2.gif",
+   "name": "Pills",
+   "author": "Spectre",
+   "description": "Pills falling from the top and piling up until they fill the cross.",
+   "tags": [
+    "pharmacy",
+    "physics"
+   ],
+   "size": 362176,
+   "crc32": 4065297159,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 2659
+  },
+  {
+   "id": "pokeballs",
+   "kind": "gif",
+   "file": "gif/pokeballs.gif",
+   "name": "Pokeballs",
+   "author": "Spectre",
+   "description": "Pokeballs falling and piling up until they fill the cross.",
+   "tags": [
+    "physics",
+    "pokemon"
+   ],
+   "size": 2972222,
+   "crc32": 3418034267,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 2262
+  },
+  {
+   "id": "water_100fps",
+   "kind": "gif",
+   "file": "gif/water_100fps.gif",
+   "name": "Water",
+   "author": "Spectre",
+   "description": "Water pouring in, filling the bottom arm, then the sides, at 100 frames a second.",
+   "tags": [
+    "calm",
+    "physics"
+   ],
+   "size": 393973,
+   "crc32": 1688456107,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 2672
+  },
+  {
+   "id": "fluid_rainbow",
+   "kind": "gif",
+   "file": "gif/fluid_rainbow.gif",
+   "name": "Fluid rainbow",
+   "author": "Spectre",
+   "description": "Rainbow fluid pouring in and filling the cross in colored layers.",
+   "tags": [
+    "physics",
+    "rainbow",
+    "trippy"
+   ],
+   "size": 1151065,
+   "crc32": 2981819848,
+   "layout": "cross",
+   "width": 96,
+   "height": 96,
+   "frames": 2994
   }
  ]
 }
