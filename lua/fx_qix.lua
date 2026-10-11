@@ -3,18 +3,14 @@
 -- cross's too), back to the center. Short: compiling takes from the 30 KB.
 local mx, my = getMatrix()
 local floor, random, sin, cos = math.floor, math.random, math.sin, math.cos
--- the panels' shape (the cross has no corners): a pixel drawn and read back;
--- per row, the first and last that exist
-local L, R = {}, {}
-for y = 1, my do
-  L[y], R[y] = mx, -1
-  for x = 0, mx - 1 do
-    drawPixel(x, y - 1, 255, 255, 255)
-    if getPixel(x, y - 1) > 0 then L[y] = math.min(L[y], x); R[y] = x end
-  end
+-- a panel there? (no corners on the cross): lit already, or lit when drawn
+local function on(x, y)
+  if getPixel(x, y) > 0 then return true end
+  drawPixel(x, y, 255, 255, 255)
+  local lit = getPixel(x, y) > 0
+  drawPixel(x, y, 0, 0, 0)
+  return lit
 end
-clearDisplay()
-local function on(x, y) return y >= 0 and y < my and x >= L[y + 1] and x <= R[y + 1] end
 local min, max = math.min, math.max
 -- 3 palettes (pinks, greens, blues) of 5 colors: r, g, b, ...
 local PAL = { 255,0,153, 255,45,0, 255,0,0, 227,0,255, 255,89,0,

@@ -4,18 +4,26 @@
 -- No panel (the cross's corners) is a wall: sand piles on the arms.
 local mx, my = getMatrix()
 local random, floor = math.random, math.floor
--- the panels' shape (the cross has no corners): a pixel drawn and read back;
--- per row, the first and last that exist
-local L, R = {}, {}
-for y = 1, my do
-  L[y], R[y] = mx, -1
+-- the panels' shape (no corners on the cross): per row, the first and last
+-- pixel that lights, as first * 1024 + last
+local S = {}
+for y = 0, my - 1 do
+  local a, b = mx, -1
   for x = 0, mx - 1 do
-    drawPixel(x, y - 1, 255, 255, 255)
-    if getPixel(x, y - 1) > 0 then L[y] = math.min(L[y], x); R[y] = x end
+    drawPixel(x, y, 255, 255, 255)
+    if getPixel(x, y) > 0 then
+      if x < a then a = x end
+      b = x
+    end
   end
+  S[y + 1] = a * 1024 + b
 end
 clearDisplay()
-local function on(x, y) return y >= 0 and y < my and x >= L[y + 1] and x <= R[y + 1] end
+local function on(x, y)
+  if y < 0 or y >= my then return false end
+  local s = S[y + 1]
+  return x >= s // 1024 and x <= s % 1024
+end
 local WORDS = (mx + 31) // 32
 local occ = {}
 local function clear_all()
@@ -32,7 +40,8 @@ local function set(x, y, on)
   if on then occ[i] = occ[i] | (1 << (x & 31)) else occ[i] = occ[i] & ~(1 << (x & 31)) end
 end
 clear_all()
-local spout, dir, hue, t, blocked = (L[1] + R[1]) // 2, 1, 0, 0, 0
+local L1, R1 = S[1] // 1024, S[1] % 1024 -- the top row: where the spout moves
+local spout, dir, hue, t, blocked = (L1 + R1) // 2, 1, 0, 0, 0
 -- ~60 frames/s at most: the same speed on the matrix and in the app
 local t_next = millis()
 local function pace(ms)
@@ -77,7 +86,7 @@ while true do
   updateDisplay(true) -- the next frame starts from this one: only changes are drawn
   -- the spout wanders, the color shifts
   spout = spout + dir
-  if spout <= L[1] + 2 or spout >= R[1] - 2 or random(0, 40) == 0 then dir = -dir end
+  if spout <= L1 + 2 or spout >= R1 - 2 or random(0, 40) == 0 then dir = -dir end
   hue = (hue + 1) % 256
   t = t + 1
   -- full (the spout can't pour for a while): again

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-11T17:47:38Z",
+ "updated": "2026-10-11T18:58:02Z",
  "items": [
   {
    "id": "cross_pharma",
@@ -373,8 +373,8 @@
    "tags": [
     "effect"
    ],
-   "size": 1747,
-   "crc32": 2160454051
+   "size": 1820,
+   "crc32": 2862764539
   },
   {
    "id": "fx_fire",
@@ -498,8 +498,8 @@
     "effect",
     "retro"
    ],
-   "size": 3280,
-   "crc32": 1932183260
+   "size": 3106,
+   "crc32": 2731744356
   },
   {
    "id": "fx_rain",
@@ -623,8 +623,8 @@
    "tags": [
     "simulation"
    ],
-   "size": 2901,
-   "crc32": 1081907509
+   "size": 2972,
+   "crc32": 2957793948
   },
   {
    "id": "sim_boids",
@@ -688,8 +688,8 @@
    "tags": [
     "simulation"
    ],
-   "size": 3139,
-   "crc32": 1573443967
+   "size": 3283,
+   "crc32": 785915747
   },
   {
    "id": "sound_bars",

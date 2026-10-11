@@ -2,20 +2,26 @@
 -- walls are the panels' edges: on the cross, the arms and their corners.
 local mx, my = getMatrix()
 local random, floor, sqrt = math.random, math.floor, math.sqrt
--- the panels' shape (the cross has no corners): a pixel drawn and read back;
--- per row, the first and last that exist
-local L, R = {}, {}
-for y = 1, my do
-  L[y], R[y] = mx, -1
+-- the panels' shape (no corners on the cross): per row, the first and last
+-- pixel that lights, as first * 1024 + last
+local S = {}
+for y = 0, my - 1 do
+  local a, b = mx, -1
   for x = 0, mx - 1 do
-    drawPixel(x, y - 1, 255, 255, 255)
-    if getPixel(x, y - 1) > 0 then L[y] = math.min(L[y], x); R[y] = x end
+    drawPixel(x, y, 255, 255, 255)
+    if getPixel(x, y) > 0 then
+      if x < a then a = x end
+      b = x
+    end
   end
+  S[y + 1] = a * 1024 + b
 end
 clearDisplay()
 local function on(x, y)
   x, y = floor(x), floor(y)
-  return y >= 0 and y < my and x >= L[y + 1] and x <= R[y + 1]
+  if y < 0 or y >= my then return false end
+  local s = S[y + 1]
+  return x >= s // 1024 and x <= s % 1024
 end
 local N = 7
 local x, y, vx, vy, r, cr, cg, cb = {}, {}, {}, {}, {}, {}, {}, {}
