@@ -1,8 +1,9 @@
 # Spectre Matrix store
 
 Lua scripts and GIFs for the Spectre Matrix, browsed and installed from the
-app's **Store** tab (https://antoine.doussaud.org/matrix/). The web server
-follows this repo's `main` branch (`scripts/sync-store.sh`, every 15 min).
+app's **Store** (https://antoine.doussaud.org/matrix/, Add → Open the store).
+The web server follows this repo's `main` branch (`scripts/sync-store.sh`,
+every 15 min).
 
 ## Add something
 
@@ -21,15 +22,27 @@ follows this repo's `main` branch (`scripts/sync-store.sh`, every 15 min).
 4. `python3 tools/build_catalog.py` (needs Pillow and numpy): checks
    everything and writes `catalog.json`. Commit both, or open a pull request.
 
-Check scripts on a real matrix first: Lua has 30 KB there, compiling
-included (keep scripts under 4 KB), and the cross shows 4 bits a color
-(values under 77 of 255 are black). The app's Lua API: `src/lua/README.md`
-in [spectre-matrix-app](https://github.com/spectrenoir06/spectre-matrix-app).
+Lua has 30 KB on the matrix, compiling included: keep scripts under ~4 KB,
+use flat arrays rather than tables of tables. The cross shows 4 bits a color
+(values under 77 of 255 are black). The Lua API: `src/lua/README.md` in
+[spectre-matrix-app](https://github.com/spectrenoir06/spectre-matrix-app);
+its Code screen has a live simulator to try a script first.
+
+## Checks
+
+CI (`.github/workflows/check.yml`) on every push and pull request:
+
+- `catalog`: `tools/build_catalog.py --check` (the catalog matches the files);
+- `lua`: every script through the matrix's own Lua code
+  (spectre-matrix-firmware's `test/host/lua_host`, 32-bit like the ESP32,
+  30 KB of Lua memory): a script that errors or doesn't fit fails here, not
+  on a board. Locally, with the firmware checked out:
+  `SPECTRE_LUA_DIRS=$PWD/lua pytest ../../elec/platformIO/spectre-matrix-firmware/test/test_lua_scripts.py`
 
 ## Files
 
 - `items.json`: the list, by hand
-- `catalog.json`: generated (sizes, CRC-32, GIF sizes), what the app reads
+- `catalog.json`: generated (sizes, CRC-32, GIF sizes, what a script needs: mic, time), what the app reads
 - `tools/build_catalog.py`: items.json -> catalog.json, with checks
 - `tools/optimize_gif.py`: lossless GIF shrinking, checked frame by frame
 - `tools/make_seed_gifs.py`: how the first GIFs were drawn
