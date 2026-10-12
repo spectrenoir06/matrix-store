@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: spectrenoir06/spectre-matrix-firmware
+          ssh-key: ${{ secrets.SPECTRE_FIRMWARE_KEY }}  # private repo: a read-only deploy key
           path: firmware
       - run: |
           sudo apt-get update -qq
