@@ -7,7 +7,7 @@
 #   STORE_DIR=path sync-store.sh        # a local checkout instead (testing)
 set -euo pipefail
 
-REPO=spectrenoir06/matrix-store
+REPO=spectrenoir06/spectre-matrix-store
 DEST=${1:-/home/docker_data/static-web-server/matrix/store}
 
 if [[ -n ${STORE_DIR:-} ]]; then

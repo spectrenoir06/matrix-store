@@ -9,7 +9,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install pillow
       - run: python3 tools/build_catalog.py --check
-  # Every script through the matrix's own Lua (Matrix_ble_player's
+  # Every script through the matrix's own Lua (spectre-matrix-firmware's
   # test/host/lua_host, 32-bit like the ESP32): a script that errors or
   # doesn't fit the matrix's 30 KB of Lua memory fails here, not on a board.
   lua:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/checkout@v7
         with:
-          repository: spectrenoir06/matrix_ble_player
+          repository: spectrenoir06/spectre-matrix-firmware
           path: firmware
       - run: |
           sudo apt-get update -qq
