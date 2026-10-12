@@ -2,7 +2,7 @@ name: check
 on: [push, pull_request]
 jobs:
   catalog:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -13,7 +13,7 @@ jobs:
   # test/host/lua_host, 32-bit like the ESP32): a script that errors or
   # doesn't fit the matrix's 30 KB of Lua memory fails here, not on a board.
   lua:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/checkout@v7
