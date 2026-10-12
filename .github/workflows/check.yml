@@ -9,3 +9,22 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install pillow
       - run: python3 tools/build_catalog.py --check
+  # Every script through the matrix's own Lua (Matrix_ble_player's
+  # test/host/lua_host, 32-bit like the ESP32): a script that errors or
+  # doesn't fit the matrix's 30 KB of Lua memory fails here, not on a board.
+  lua:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: spectrenoir06/matrix_ble_player
+          path: firmware
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq g++-multilib
+          pip install pytest
+      - working-directory: firmware
+        env:
+          SPECTRE_LUA_DIRS: ${{ github.workspace }}/lua
+        run: pytest -v test/test_lua_scripts.py
